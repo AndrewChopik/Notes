@@ -12,6 +12,9 @@ import com.andrew.chopik.notepadkotlin.dagger.ActivityComponent
 import com.andrew.chopik.notepadkotlin.dagger.DaggerActivityComponent
 import com.andrew.chopik.notepadkotlin.model.Note
 import com.andrew.chopik.notepadkotlin.model.NoteListViewModel
+import com.crashlytics.android.Crashlytics
+import com.crashlytics.android.answers.Answers
+import io.fabric.sdk.android.Fabric
 import kotlinx.android.synthetic.main.activity_main_list.*
 import javax.inject.Inject
 
@@ -29,6 +32,7 @@ class MainListActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        Fabric.with(this, Crashlytics())
         setContentView(R.layout.activity_main_list)
 
         activityComponent.inject(this)
