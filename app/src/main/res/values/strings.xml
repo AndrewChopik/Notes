@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Notepad</string>
+
+    <string name="hint_title">Title</string>
+    <string name="hint_text">Text</string>
+
+    <string name="dialog_message_save">Save changes?</string>
+    <string name="dialog_message_delete">Delete note?</string>
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
+    <string name="delete">Delete</string>
+</resources>
